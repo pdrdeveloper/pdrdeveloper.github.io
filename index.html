@@ -8,8 +8,39 @@
     <title>Pedro Henrique</title>
 </head>
 <body>
-    <h1>Pedro Henrique</h1>
-    <p>Sou um desenvolvedor HTML, CSS e JS que <br>
-        quer mudar o mundo com suas ideias.</p>
+        <nav class="links">
+            <label for="about">Informações</label>
+            <label for="projects">Projetos</label>
+        </nav>
+        <div class="scroll">
+            <input type="radio" name="grupo" id="about" 
+            checked="true">
+            <input type="radio" name="grupo" id="projects">
+            <section class="sections">
+                <section class="bloco" id="scaboutme">
+                    <div id="divaboutme">
+                    <h1>Pedro Henrique</h1> &nbsp;
+                    <p>Sou um desenvolvedor HTML, CSS e JS que <br>
+                        quer mudar o mundo com suas ideias.</p>
+                    </div>
+                </section>
+                <section class="bloco" id="scprojects">
+                    <div id="firstline">
+                        <p>PROJETO 1</p><br>
+                        <img src="imgs/chicken.png"><br>
+                        <br>
+                        <p>PROJETO 2</p><br>
+                        <img src="imgs/drop.png">
+                    </div>
+                    <div id="secondline">
+                        <p>PROJETO 3</p><br>
+                        <img src="imgs/flash.png"><br>
+                        <br>
+                        <p>PROJETO 4</p><br>
+                        <img src="imgs/icone.png">
+                    </div>
+                </section>
+            </section>
+        </div>
 </body>
 </html>

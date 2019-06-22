@@ -1,14 +1,86 @@
-body {
-    background: #333333;
-    color: white;
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.links {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    display: flex;
+}
+
+.links label {
+    padding: 10px 0;
+    flex-grow: 1;
+    cursor: pointer;
+    transition: all .4s;
     text-align: center;
-    font-family: Arial;
+    font-size: 100%;
+    color: white;
 }
 
-body h1 {
-    font-size: 24pt;
+.links label:hover {
+    background-color: rgba(255, 255, 255, .2);
 }
 
-body p {
-    font-size: 12pt;
+.scroll input {
+    display: none;
+}
+
+.bloco {
+    width: 100vw;
+    height: 100vh;
+}
+
+#scaboutme {
+    background: #0059ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#divaboutme {
+    width: 400px;
+    height: 200px;
+    text-align: center;
+
+}
+
+#scprojects {
+    background: #9615b6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+#divfirstline {
+    width: 400px;
+    height: 200px;
+}
+
+#divsecondline {
+    width: 400px;
+    height: 200px;
+}
+
+.scroll {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sections {
+    transition: all .4s;
+}
+
+#projects:checked ~ .sections {
+    margin-top: -100vh;
 }
