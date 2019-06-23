@@ -5,82 +5,75 @@
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
 }
-
-.links {
-    width: 100%;
-    height: 50px;
-    position: fixed;
+#top-tab {
+    position: relative;
     display: flex;
-}
-
-.links label {
-    padding: 10px 0;
-    flex-grow: 1;
-    cursor: pointer;
-    transition: all .4s;
-    text-align: center;
-    font-size: 100%;
-    color: white;
-}
-
-.links label:hover {
-    background-color: rgba(255, 255, 255, .2);
-}
-
-.scroll input {
-    display: none;
-}
-
-.bloco {
-    width: 100vw;
-    height: 100vh;
-}
-
-#scaboutme {
-    background: #0059ff;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#divaboutme {
-    width: 400px;
-    height: 200px;
     text-align: center;
-
+    min-height: 100vh;
+    background: #bbbbbb;
 }
-
-#scprojects {
-    background: #9615b6;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
+#top-tab div {
+    max-width: 800px;
 }
-
-#divfirstline {
-    width: 400px;
-    height: 200px;
+#top-tab div h2 {
+    font-size: 4em;
 }
-
-#divsecondline {
-    width: 400px;
-    height: 200px;
+#top-tab div p {
+    font-size: 1.2em;
+    opacity: 0.7;
 }
-
-.scroll {
-    display: flex;
-    width: 100vw;
+.scrolldown {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-80px) translateX(-50%) rotate(45deg);
+}
+.scrolldown span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    animation: animate 1.5s linear infinite; 
+    opacity: 0;
+}
+.scrolldown span:nth-child(1) {
+    transform: translate(-15px, -15px);
+    animation-delay: -0.4s;
+}
+.scrolldown span:nth-child(2) {
+    transform: translate(0, 0);
+    animation-delay: -0.2s;
+}
+.scrolldown span:nth-child(3) {
+    transform: translate(15px, 15px);
+    animation-delay: 0s;
+}
+@keyframes animate {
+    0%{
+        top: -5px;
+        left: -5px;
+        opacity: 0;
+    }
+    25%{
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+    }
+    50%,100%{
+        top: 5px;
+        left: 5px;
+        opacity: 0;
+    }
+}
+#body-tab {
+    width: 100vh;
     height: 100vh;
-    overflow: hidden;
-}
-
-.sections {
-    transition: all .4s;
-}
-
-#projects:checked ~ .sections {
-    margin-top: -100vh;
 }
