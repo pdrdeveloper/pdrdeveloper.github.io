@@ -1,53 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/e8fc7339cf.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Pedro Henrique</title>
-</head>
+    <title>My site</title>
+</head> 
 <body>
-    <section id="top-tab">
-        <div id="img-desktop">
-            <img src="imgs/source_logo.png">
+    <header>
+        <h1>PDR Developer</h1>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#div-desc">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#"><button>Contact</button></a>
+        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+    </header>
+    <div id="mobile_menu" class="overlay">
+        <a class="close" onclick="closeNav()"><i class="fas fa-times"></i></a>
+        <div class="overlay_content">
+            <a href="#div-desc" onclick="closeNav()">About</a>
+            <a href="#projects" onclick="closeNav()">Projects</a>
         </div>
-        <div id="img-mobile">
-            <img src="imgs/mobile_logo.png">
+    </div>
+    <div class="about">
+        <div class="card">
+            <div class="card-header">
+                <img src="imgs/profile_image.jpg" alt="Profile Image" class="profile-img">
+            </div>
+            <div class="card-body">
+                <p class="full-name">Pedro Henrique</p>
+                <p class="username">@pdrdeveloper</p>
+                <p class="city">Brasília, DF</p>
+                <p class="desc">Front-end developer.</p>
+                <p>
+                    <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon github"><i class="fab fa-github"></i></a>
+                </p>
+            </div>
+            <div class="card-footer">
+                <div class="col">
+                    <button>View Description</button>
+                </div>
+            </div>
         </div>
-        <div id="img-second-mobile">
-            <img src="imgs/second_mobile_logo.png">
-        </div>
-        <div id="img-text">
-            <img src="imgs/text_logo.png">
-        </div>
-        <div class="scrolldown">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </section>
-    <section id="body-tab">
-        <div id="about-me">
-            <fieldset class="top-text">
-                <legend>sobre mim</legend>
-            </fieldset>
-        </div>
-        <div id="pratices">
-            <fieldset class="top-text">
-                <legend>práticas</legend>
-            </fieldset>
-        </div>
-        <div id="projects">
-            <fieldset class="top-text">
-                <legend>projetos</legend>
-            </fieldset>
-        </div>
-        <div id="contact">
-            <fieldset class="top-text">
-                <legend>contato</legend>
-            </fieldset>
-        </div>
-    </section>
+    </div>
+    <div id="div-desc">
+
+    </div>
+    <div id="projects">
+        
+    </div>
+    <div class="contact">
+    
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
