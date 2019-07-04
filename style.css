@@ -158,9 +158,9 @@ header button:hover {
 .card {
     width: 600px;
     margin: 0 auto 0;
-    background-color: #fff;
+    background-color: rgb(230, 230, 230);
     box-shadow: 0 3px 30px rgba(0, 0, 0, .14);
-    color: #444;
+    color: rgb(0, 0, 0);
     text-align: center;
     font-size: 16px;
     font-family: 'Raleway', sans-serif;
@@ -178,8 +178,8 @@ header button:hover {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 6px solid #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    border: 6px solid rgb(230, 230, 230);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.616);
 }
 
 .card .card-body {
