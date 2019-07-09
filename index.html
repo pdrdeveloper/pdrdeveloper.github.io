@@ -5,29 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/e8fc7339cf.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>My site</title>
 </head> 
 <body>
-    <header>
+    <header id="home">
         <h1>PDR Developer</h1>
         <nav>
             <ul class="nav_links">
-                <li><a href="#div-desc">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a class="scroll" href="#about-me" onclick="activateTopButton()">About</a></li>
+                <li><a class="scroll" href="#projects">Projects</a></li>
+                <li><a class="scroll" href="#skills">Skills</a></li>
             </ul>
         </nav>
-        <a class="cta" href="#"><button>Contact</button></a>
-        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
-    </header>
-    <div id="mobile_menu" class="overlay">
-        <a class="close" onclick="closeNav()"><i class="fas fa-times"></i></a>
-        <div class="overlay_content">
-            <a href="#div-desc" onclick="closeNav()">About</a>
-            <a href="#projects" onclick="closeNav()">Projects</a>
+            <a class="cta" href="#"><button>Contact</button></a>
+            <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+        <div id="mobile_menu" class="overlay">
+            <a class="close" onclick="closeNav()"><i class="fas fa-times"></i></a>
+            <div class="overlay_content">
+                <a class="scroll" href="#about-me" onclick="closeNav()">About</a>
+                <a class="scroll" href="#projects" onclick="closeNav()">Projects</a>
+                <a class="scroll" href="#skills" onclick="closeNav()">Skills</a>
+            </div>
         </div>
-    </div>
-    <div class="about">
+    </header>
+    <div class="land-page">
         <div class="card">
             <div class="card-header">
                 <img src="imgs/profile_image.jpg" alt="Profile Image" class="profile-img">
@@ -44,20 +47,51 @@
             </div>
             <div class="card-footer">
                 <div class="col">
-                    <button>View Description</button>
+                    <a>View Description</a>
                 </div>
             </div>
         </div>
     </div>
-    <div id="div-desc">
-
-    </div>
-    <div id="projects">
-        
-    </div>
-    <div class="contact">
-    
-    </div>
+    <section class="about-sc">
+        <div class="title-about" id="about-me">
+            <h1>About Me</h1>
+        </div>
+        <div id="about">
+        <div class="left">
+            <h1>PDR Developer</h1>
+            <h2>Pedro Henrique</h2>
+        </div>
+        <div class="right">
+        <p>Um desenvolvedor front-end<br>
+            nascido em Brasília, DF<br>
+            que quer mudar o mundo<br>
+            com as suas ideias,<br>
+            neste site você irá ver<br>
+             alguns de seus projetos.</p>
+        </div>
+        </div>
+    </section>
+    <!--
+    <section class="skills">
+    <div class="container" id="skills">
+            <ul>
+                <li class="html">
+                    <p>HTML</p>
+                    <p>90%</p>
+                </li>
+                <li class="css">
+                    <p>CSS</p>
+                    <p>60%</p>
+                </li>
+                <li class="javascript">
+                    <p>JavaScript</p>
+                    <p>30%</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+     -->
+    <a class="click_top" id="top_btn" href="#home" onclick="goToTopOfPage()"><i class="fas fa-arrow-up fa-lg"></i></a>
     <script src="script.js"></script>
     <script type="text/javascript">
     /*function click() {
