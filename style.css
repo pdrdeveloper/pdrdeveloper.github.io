@@ -123,6 +123,10 @@ header button:hover {
     font-size: 60px;
 }
 
+.overlay .close:hover {
+    opacity: .5;
+}
+
 @media screen and (max-height: 450px) {
     .overlay a {
         font-size: 20px;
